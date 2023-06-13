@@ -1,0 +1,162 @@
+body {
+    background: #3d1a21;
+    text-align: center;
+    font-family: 'Orbit', sans-serif;
+  }
+  
+  .title {
+    font-family: 'Orbit', sans-serif;
+    text-align: center;
+    font-size: 6em;
+    user-select: none;
+    letter-spacing: -32.5px;
+    margin-top: 10%;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  
+  .word {
+    padding: 0 10px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
+  .notTyped {
+    color: #632330;
+  }
+  
+  .isTyped {
+    color: #eb3458;
+  }
+
+
+  .pulsing-text {
+    /* Create a linear gradient. */
+    background: #ecaa2f;
+    background-color: #ecaa2f;
+    background: linear-gradient(90deg,
+      #ecaa2f 0%, 
+      #ecaa2f 30%,
+      #EEEEEE 50%,
+      #ecaa2f 70%,
+      #ecaa2f 100%);
+    
+    background-repeat: no-repeat;
+    
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text */
+    animation: pulsing-text-animation 3s linear forwards infinite;
+  }
+  
+  /* Move the background and make it larger. */
+  /* Animation shown when hovering over the text. */
+  @keyframes pulsing-text-animation {
+    0% {
+      background-size: 10%;
+      background-position: 0 -100%;
+    }
+    80% {
+      background-size: 200%;
+      background-position: 0 0;
+    }
+    90% {
+      background-size: 300%;
+      background-position: 0 200%;
+    }
+    100% {
+      background-size: 400%;
+      background-position: 0 300%;
+    }
+  }
+  
+  /* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
+  
+.hint {
+    color: #eb3458;
+    font-size: xxx-large;
+    letter-spacing: 0px;
+}
+
+  .pulsing-text-2 {
+    /* Fallback: Set a background color. */
+    background-color: #960b27;
+    font-size: larger;
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(
+      90deg,
+      #eb3458 50%,
+      #ff7893 55%,
+      #eb3458 60%,
+      #eb3458 100%
+    );
+    
+    /* Set the background size and repeat properties. */
+    background-size: 400%;
+    background-repeat: repeat;
+    background-position: left;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  
+    
+    animation: pulsing-text-animation-2 3s 1s ease-out forwards infinite;
+  }
+  
+  @keyframes pulsing-text-animation-2 {
+    0% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+
+  #button {
+    display: inline-block;
+    margin:0.4em;  padding:1em;
+    margin-top: 10%;
+  cursor:pointer;
+  background:#b011fa;  color: white;
+  border-radius: 2em;
+  }
+
+  .animate {
+    animation: pop 0.3s linear 1;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+@keyframes pop{
+  50%  {transform: scale(1.2);}
+}
+
+.faded {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  background-color: #321a3d;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -ms-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
+}

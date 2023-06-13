@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="purple.css">
+    </head>
+    <body id="body" class="fadein">
+<div class='title container'>
+  <div class='word'><span class='notTyped' id='l'>l</span>
+  <span class='notTyped' id='o'>o</span>
+  <span class='notTyped' id='c'>c</span>
+    <span class='notTyped' id='k'>k</span></div><nobr>
+  <span class='notTyped' id=''> </span>
+  <div class='word'><span class='notTyped' id='a'>a</span>
+  <span class='notTyped' id='n'>n</span>
+  <span class='notTyped' id='d'>d</span></div>
+  <span class='notTyped' id=''> </span>
+  <div class='word'><span class='notTyped' id='k1'>k</span>
+  <span class='notTyped' id='e'>e</span>
+  <span class='notTyped' id='y'>y</span></div>
+  <div class="word hint">board</div>
+</div>
+
+<div class="pulsing-text-2">the title screen is locked? and why does it say keyboard at the end?<br>it should say just key...</div>
+
+<div id="button" class="hidden">Next Level</div>
+
+<script>
+var body = document.getElementById('body')
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === 'l' && document.getElementById('l').classList.contains('notTyped')) {
+    document.getElementById('l').classList.remove('notTyped');
+    document.getElementById('l').classList.add('isTyped');
+    index.push('l')
+  } else if (event.key === 'o' && document.getElementById('o').classList.contains('notTyped')) {
+    document.getElementById('o').classList.remove('notTyped');
+    document.getElementById('o').classList.add('isTyped');
+    index.push('o')
+  } else if (event.key === 'c' && document.getElementById('c').classList.contains('notTyped')) {
+    document.getElementById('c').classList.remove('notTyped');
+    document.getElementById('c').classList.add('isTyped');
+    index.push('c')
+  } else if (event.key === 'k' && document.getElementById('k').classList.contains('notTyped')) {
+    document.getElementById('k').classList.remove('notTyped');
+    document.getElementById('k').classList.add('isTyped');
+    index.push('k')
+  } else if (event.key === 'a' && document.getElementById('a').classList.contains('notTyped')) {
+    document.getElementById('a').classList.remove('notTyped');
+    document.getElementById('a').classList.add('isTyped');
+    index.push('a')
+  } else if (event.key === 'n' && document.getElementById('n').classList.contains('notTyped')) {
+    document.getElementById('n').classList.remove('notTyped');
+    document.getElementById('n').classList.add('isTyped');
+    index.push('n')
+  } else if (event.key === 'd' && document.getElementById('d').classList.contains('notTyped')) {
+    document.getElementById('d').classList.remove('notTyped');
+    document.getElementById('d').classList.add('isTyped');
+    index.push('d')
+  } else if (event.key === 'k' && document.getElementById('k1').classList.contains('notTyped')) {
+    document.getElementById('k1').classList.remove('notTyped');
+    document.getElementById('k1').classList.add('isTyped');
+    index.push('k1')
+  } else if (event.key === 'e' && document.getElementById('e').classList.contains('notTyped')) {
+    document.getElementById('e').classList.remove('notTyped');
+    document.getElementById('e').classList.add('isTyped');
+    index.push('e')
+  } else if (event.key === 'y' && document.getElementById('y').classList.contains('notTyped')) {
+    document.getElementById('y').classList.remove('notTyped');
+    document.getElementById('y').classList.add('isTyped');
+    index.push('y')
+  }
+  if (document.getElementById('button').classList.contains('hidden') && index.includes('l') && index.includes('o') && index.includes('c') && index.includes('k') && index.includes('a') && index.includes('n') && index.includes('d') && index.includes('k1') && index.includes('e') && index.includes('y')) {
+    document.getElementById('button').classList.remove('hidden')
+    document.getElementById('button').classList.add('animate')
+  }
+});
+
+document.getElementById('button').onclick = function() {
+  document.getElementById('body').classList.add('faded')
+}
+
+var index = [];
+
+</script>
+</body>
+</html>
