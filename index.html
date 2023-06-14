@@ -26,6 +26,8 @@
 
 <div id="button" class="hidden">Next Level</div>
 
+<div style="position: absolute; top: 15; left: 20;"><span>red (tutorial)</span></div>
+
 <script>
 var body = document.getElementById('body')
 
@@ -80,7 +82,7 @@ document.addEventListener("keydown", (event) => {
 document.getElementById('button').onclick = function() {
   document.getElementById('body').classList.add('faded')
   setTimeout(() => {
-    window.location = 'purple.html'
+    window.location = '/levels/purple.html'
   }, 1000)
 }
 

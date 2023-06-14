@@ -4,6 +4,11 @@ body {
     font-family: 'Orbit', sans-serif;
     filter: alpha(opacity=0);
     opacity: 0;
+    color: #9c34eb;
+  }
+
+  span {
+    user-select: none;
   }
   
   .title {
@@ -103,6 +108,7 @@ body {
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    user-select: none;
   
     
     animation: pulsing-text-animation-2 3s 1s ease-out forwards infinite;

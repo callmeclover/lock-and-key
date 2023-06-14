@@ -1,8 +1,10 @@
 body {
-    background: #3d1a21;
+    background: #1a1b3d;
     text-align: center;
     font-family: 'Orbit', sans-serif;
-    color: #eb3458;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    color: #4934eb;
   }
 
   span {
@@ -15,6 +17,7 @@ body {
     font-size: 6em;
     user-select: none;
     letter-spacing: -32.5px;
+    color: #4934eb;
     margin-top: 10%;
   }
   
@@ -22,19 +25,10 @@ body {
     width: 100%;
   }
   
-  
   .word {
     padding: 0 10px;
     white-space: nowrap;
     display: inline-block;
-  }
-  
-  .notTyped {
-    color: #632330;
-  }
-  
-  .isTyped {
-    color: #eb3458;
   }
 
 
@@ -84,30 +78,30 @@ body {
   /* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
   
 .hint {
-    color: #eb3458;
+    color: #4934eb;
     font-size: xxx-large;
     letter-spacing: 0px;
 }
 
   .pulsing-text-2 {
+    user-select: none;
     /* Fallback: Set a background color. */
-    background-color: #960b27;
+    background-color: #270b96;
     font-size: larger;
     
     /* Create the gradient. */
     background-image: linear-gradient(
       90deg,
-      #eb3458 50%,
-      #ff7893 55%,
-      #eb3458 60%,
-      #eb3458 100%
+      #4934eb 50%,
+      #787dff 55%,
+      #4934eb 60%,
+      #4934eb 100%
     );
     
     /* Set the background size and repeat properties. */
     background-size: 400%;
     background-repeat: repeat;
     background-position: left;
-    user-select: none;
   
     /* Use the text as a mask for the background. */
     /* This will show the gradient as a text color rather than element bg. */
@@ -134,7 +128,7 @@ body {
     margin:0.4em;  padding:1em;
     margin-top: 10%;
   cursor:pointer;
-  background:#b011fa;  color: white;
+  background:#112cfa;  color: white;
   border-radius: 2em;
   }
 
@@ -159,10 +153,22 @@ body {
   -ms-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
-  background-color: #321a3d;
+  background-color: #3d2e1a;
   -webkit-transition: background-color .5s ease-in-out;
   -moz-transition: background-color .5s ease-in-out;
   -ms-transition: background-color .5s ease-in-out;
   -o-transition: background-color .5s ease-in-out;
   transition: background-color .5s ease-in-out;
+}
+
+
+.fadein {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 100;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
