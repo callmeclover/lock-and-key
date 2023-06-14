@@ -79,6 +79,9 @@ document.addEventListener("keydown", (event) => {
 
 document.getElementById('button').onclick = function() {
   document.getElementById('body').classList.add('faded')
+  setTimeout(() => {
+    window.location = 'purple.html'
+  }, 1000)
 }
 
 var index = [];

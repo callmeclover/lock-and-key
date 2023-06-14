@@ -12,6 +12,7 @@ body {
     font-size: 6em;
     user-select: none;
     letter-spacing: -32.5px;
+    color: #9634eb;
     margin-top: 10%;
   }
   
@@ -19,19 +20,10 @@ body {
     width: 100%;
   }
   
-  
   .word {
     padding: 0 10px;
     white-space: nowrap;
     display: inline-block;
-  }
-  
-  .notTyped {
-    color: #572363;
-  }
-  
-  .isTyped {
-    color: #9634eb;
   }
 
 
@@ -155,7 +147,7 @@ body {
   -ms-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
-  background-color: #321a3d;
+  background-color: #1a1b3d;
   -webkit-transition: background-color .5s ease-in-out;
   -moz-transition: background-color .5s ease-in-out;
   -ms-transition: background-color .5s ease-in-out;
