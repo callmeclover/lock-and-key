@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="yellow.css">
+  </head>
+  <body id="body">
+<div class='title container'>
+ <div id="lock" class='word'><span id='l'>l</span>
+<span id='o'>o</span>
+ <span id='c'>c</span>
+  <span id='k'>k</span></div>
+ <span id=''> </span>
+ <div class='word'><span id='a'>a</span>
+ <span id='n'>n</span>
+ <span id='d'>d</span></div>
+ <span id=''>&puncsp;</span>
+ <div id="key" class='word' onclick="MouseMove()"><span id='k1'>k</span>
+ <span id='e'>e</span>
+ <span id='y'>y</span></div>
+</div>
+
+<div class="pulsing-text-2">nothing looks off about this page...<br><br></div>
+
+<div id="button" class="hidden">Next Level</div>
+
+<div style="position: absolute; top: 15; left: 20;"><span>yellow (pack 2)</span></div>
+
+<script>
+var body = document.getElementById('body')
+
+var offset = [-10,0];
+var divOverlay = document.getElementById("key");
+var isDown = false;
+
+divOverlay.onclick = collideA
+
+function collideA() {
+  if (collide('key', divOverlay) == true) {
+    document.getElementById('button').classList.remove('hidden')
+    document.getElementById('button').classList.add('animate')
+  }
+}
+
+function collide(div1ID, div2) {
+            const domRect1 = document.getElementById(div1ID).getBoundingClientRect();
+            const domRect2 = div2.getBoundingClientRect();
+            return!(
+                domRect1.top > domRect2.bottom ||
+                domRect1.right < domRect2.left ||
+                domRect1.bottom < domRect2.top ||
+                domRect1.left > domRect2.right
+            )
+        }
+
+divOverlay.addEventListener('mousedown', function(e) {
+    isDown = true;
+    offset = [
+        divOverlay.offsetLeft - e.clientX,
+        divOverlay.offsetTop - e.clientY
+    ];
+}, true);
+document.addEventListener('mouseup', function() {
+    isDown = false;
+}, true);
+
+document.addEventListener('mousemove', function(e) {
+    event.preventDefault();
+    if (isDown) {
+        divOverlay.style.left = (e.clientX + offset[0]) + 'px';
+        divOverlay.style.top  = (e.clientY + offset[1]) + 'px';
+    }
+}, true);
+
+document.getElementById('button').onclick = function() {
+ document.getElementById('body').classList.replace('fadein', 'faded')
+ setTimeout(() => {
+  window.location = 'orange.html'
+ }, 1000)
+}
+
+window.onload = function() {
+ body.classList.add('fadein')
+}
+
+var index = [];
+
+</script>
+</body>
+</html>
