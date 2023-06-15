@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lime2.css">
+  </head>
+  <body id="body">
+<div class='title container'>
+ <div class='word'><span id='l'>l</span>
+<span id='o'>o</span>
+ <span id='c'>c</span>
+  <span id='k'>k</span></div>
+ <span id=''> </span>
+ <div class='word'><span id='a'>a</span>
+ <span id='n'>n</span>
+ <span id='d'>d</span></div>
+ <span id=''> </span>
+ <div class='word'><span id='k1'>k</span>
+ <span id='e'>e</span>
+ <span id='y'>y</span></div>
+</div>
+
+<div class="pulsing-text-2">and now my internet's out.</div>
+
+<div id="button" class="hidden">Next Level</div>
+
+<div style="position: absolute; top: 15; left: 20;"><span>lime 2 (pack 2)</span></div>
+
+<script>
+var body = document.getElementById('body')
+
+setInterval(() => {
+  if (navigator.onLine == false) {
+    document.getElementById('button').classList.remove('hidden')
+    document.getElementById('button').classList.add('animate')
+  }
+}, 500)
+
+// button code
+// document.getElementById('secret').onclick = function() {
+//    document.getElementById('button').classList.remove('hidden')
+//    document.getElementById('button').classList.add('animate')
+// }
+
+document.getElementById('button').onclick = function() {
+ document.getElementById('body').classList.replace('fadein', 'faded')
+ setTimeout(() => {
+  window.location = 'next.html'
+ }, 1000)
+}
+
+window.onload = function() {
+ body.classList.add('fadein')
+}
+
+var index = [];
+
+</script>
+</body>
+</html>

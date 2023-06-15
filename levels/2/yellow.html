@@ -27,6 +27,8 @@
 
 <div style="position: absolute; top: 15; left: 20;"><span>yellow (pack 2)</span></div>
 
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
 <script>
 var body = document.getElementById('body')
 
@@ -34,25 +36,24 @@ var offset = [-10,0];
 var divOverlay = document.getElementById("key");
 var isDown = false;
 
-divOverlay.onclick = collideA
+function elementsOverlap(el1, el2) {
+  const domRect1 = el1.getBoundingClientRect();
+  const domRect2 = el2.getBoundingClientRect();
 
-function collideA() {
-  if (collide('key', divOverlay) == true) {
-    document.getElementById('button').classList.remove('hidden')
-    document.getElementById('button').classList.add('animate')
-  }
+  return !(
+    domRect1.top > domRect2.bottom ||
+    domRect1.right < domRect2.left ||
+    domRect1.bottom < domRect2.top ||
+    domRect1.left > domRect2.right
+  );
 }
 
-function collide(div1ID, div2) {
-            const domRect1 = document.getElementById(div1ID).getBoundingClientRect();
-            const domRect2 = div2.getBoundingClientRect();
-            return!(
-                domRect1.top > domRect2.bottom ||
-                domRect1.right < domRect2.left ||
-                domRect1.bottom < domRect2.top ||
-                domRect1.left > domRect2.right
-            )
-        }
+divOverlay.onclick =  function() {
+    if (elementsOverlap(divOverlay, document.getElementById('lock')) == true) {
+        document.getElementById('button').classList.remove('hidden')
+    document.getElementById('button').classList.add('animate')
+    }
+}
 
 divOverlay.addEventListener('mousedown', function(e) {
     isDown = true;
@@ -76,7 +77,7 @@ document.addEventListener('mousemove', function(e) {
 document.getElementById('button').onclick = function() {
  document.getElementById('body').classList.replace('fadein', 'faded')
  setTimeout(() => {
-  window.location = 'orange.html'
+  window.location = 'pink.html'
  }, 1000)
 }
 

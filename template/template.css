@@ -1,10 +1,12 @@
+/* variate colors */
+
 body {
-    background: #3d341a;
+    background: #1a1b3d;
     text-align: center;
     font-family: 'Orbit', sans-serif;
     filter: alpha(opacity=0);
     opacity: 0;
-    color: #ebd334;
+    color: #4934eb;
   }
 
   span {
@@ -12,14 +14,12 @@ body {
   }
   
   .title {
-    position: relative;
-    right: 80;
     font-family: 'Orbit', sans-serif;
     text-align: center;
     font-size: 6em;
     user-select: none;
     letter-spacing: -32.5px;
-    color: #ebe834;
+    color: #4934eb;
     margin-top: 10%;
   }
   
@@ -34,51 +34,6 @@ body {
   }
 
 
-  .pulsing-text {
-    /* Create a linear gradient. */
-    background: #ecaa2f;
-    background-color: #ecaa2f;
-    background: linear-gradient(90deg,
-      #ecaa2f 0%, 
-      #ecaa2f 30%,
-      #EEEEEE 50%,
-      #ecaa2f 70%,
-      #ecaa2f 100%);
-    
-    background-repeat: no-repeat;
-    
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    
-    /* Animate the text */
-    animation: pulsing-text-animation 3s linear forwards infinite;
-  }
-  
-  /* Move the background and make it larger. */
-  /* Animation shown when hovering over the text. */
-  @keyframes pulsing-text-animation {
-    0% {
-      background-size: 10%;
-      background-position: 0 -100%;
-    }
-    80% {
-      background-size: 200%;
-      background-position: 0 0;
-    }
-    90% {
-      background-size: 300%;
-      background-position: 0 200%;
-    }
-    100% {
-      background-size: 400%;
-      background-position: 0 300%;
-    }
-  }
-  
-  /* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
-  
 .hint {
     color: #4934eb;
     font-size: xxx-large;
@@ -88,16 +43,16 @@ body {
   .pulsing-text-2 {
     user-select: none;
     /* Fallback: Set a background color. */
-    background-color: #96810b;
+    background-color: #270b96;
     font-size: larger;
     
     /* Create the gradient. */
     background-image: linear-gradient(
       90deg,
-      #e5eb34 50%,
-      #fff478 55%,
-      #e5eb34 60%,
-      #e5eb34 100%
+      #4934eb 50%,
+      #787dff 55%,
+      #4934eb 60%,
+      #4934eb 100%
     );
     
     /* Set the background size and repeat properties. */
@@ -130,7 +85,7 @@ body {
     margin:0.4em;  padding:1em;
     margin-top: 10%;
   cursor:pointer;
-  background:#fadf11;  color: white;
+  background:#112cfa;  color: white;
   border-radius: 2em;
   }
 
@@ -155,7 +110,7 @@ body {
   -ms-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
-  background-color: #391a3d;
+  background-color: #3d2e1a;
   -webkit-transition: background-color .5s ease-in-out;
   -moz-transition: background-color .5s ease-in-out;
   -ms-transition: background-color .5s ease-in-out;
@@ -173,21 +128,4 @@ body {
   -ms-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
-}
-
-#key {
-  cursor: grab;
-  position: absolute;
-  font-weight: bold;
-  width: fit-content;
-  height: fit-content;
-}
-
-#lock {
-  width: fit-content;
-  height: fit-content;
-}
-
-#key:active {
-  cursor: grabbing;
 }
