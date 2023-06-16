@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ruby.css">
+  </head>
+  <body id="body">
+<div class='title container'>
+ <div class='word'><span id='l' class="pid">l</span>
+<span id='o' class="pid">o</span>
+ <span id='c' class="pid">c</span>
+  <span id='k' class="pid">k</span></div>
+ <span id=''> </span>
+ <div class='word' class="pid"><span id='a'>a</span>
+ <span id='n' class="pid">n</span>
+ <span id='d' class="pid">d</span></div>
+ <span id=''> </span>
+ <div class='word'><span id='k1 class="pid"'>k</span>
+ <span id='e' class="pid">e</span>
+ <span id='y' class="pid">y</span></div>
+</div>
+
+<textarea style="background: none; border: none; border-bottom: 4px solid hotpink; resize: none; width: 250px; color: inherit; font-family: inherit; font-size: 2.2em; padding: 0; margin: 0; height: 1.8em; text-align: center; overflow-y: hidden;" id="numArea" maxlength="9"></textarea><br><button style="margin-top: 5px; padding: 5px; border: none;" id="submit">I have the answer!</button><br><br>
+
+<div class="pulsing-text-2"><span id="encoded"></span><br><br>you'll figure it out yourself.<br><br></div>
+<span class="pulsing-text-2" id="hhint">hint: its UTF-8</span>
+
+<div id="button" class="hidden">Next Level</div>
+
+<div style="position: absolute; top: 15; left: 20;"><span>ruby (pack 3)</span></div>
+
+<script src="randexp.min.js"></script>
+
+<script>
+var body = document.getElementById('body')
+
+//document.getElementById('secret').onclick = function() { 
+//  document.getElementById('button').classList.remove('hidden')
+//  document.getElementById('button').classList.add('animate')
+//}
+
+document.getElementById('button').onclick = function() {
+ document.getElementById('body').classList.replace('fadein', 'faded')
+ setTimeout(() => {
+  window.location = 'next.html'
+ }, 1000)
+}
+
+const code = new RandExp('[a-z] [A-Z] [0-9] [a-z] [A-Z] [0-9] [a-z] [A-Z] [0-9]', 'i').gen().split(' ').join('');
+
+window.onload = function() {
+ body.classList.add('fadein')
+ document.getElementById('encoded').textContent = new TextEncoder().encode(code).join(' ');
+}
+
+var index = [];
+</script>
+</body>
+</html>
