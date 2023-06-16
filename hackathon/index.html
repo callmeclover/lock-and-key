@@ -1,37 +1,35 @@
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hackathon.css">
-  </head>
-  <body id="body">
 
-<div style="position: absolute; top: 15; left: 20;"><span>Error: cannot GET <span onclick="this.style.color='rgb(59,255,0)'">/hackathon/</span></span></div>
-<div id="hiddenText">Try running <kbd>git pull</kbd> to retreive this pack</div>
-<textarea id="console">test</textarea>
-<script>
-var body = document.getElementById('body')
+<head>
 
-// button code
-// document.getElementById('secret').onclick = function() {
-//    document.getElementById('button').classList.remove('hidden')
-//    document.getElementById('button').classList.add('animate')
-// }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hackathon.css">
+</head>
 
-document.getElementById('button').onclick = function() {
- document.getElementById('body').classList.replace('fadein', 'faded')
- setTimeout(() => {
-  window.location = 'next.html'
- }, 1000)
-}
+<body id="body">
+  <div style="position: absolute; top: 15; left: 20;"><span>Error: cannot GET <span
+        onclick="GreenText(this)">/hackathon/</span></span></div>
+  <div id="hiddenText">Try running <kbd>git pull</kbd> to retreive this pack</div>
+  <textarea maxlength="10" id="consoleH"></textarea><button id="consoleRun" onclick="RunCommand()">run</button>
+  <script>
+    const consoleH = document.getElementById('consoleH')
+    const consoleHRun = document.getElementById('consoleRun')
+    function GreenText(text) {
+      text.style.color = 'rgb(59,255,0)'
+      consoleH.style.visibility = 'visible'
+      consoleHRun.style.visibility = 'visible'
+      document.getElementById('hiddenText').style.visibility = 'visible'
+    }
+    document.getElementById('consoleRun').onclick = function() {
+  if (document.getElementById('consoleH').value == '12' || document.getElementById('consoleH').value == '012') { 
+  }
+  document.getElementById('numArea').value = ''
 
-window.onload = function() {
- body.classList.add('fadein')
-}
+ }
 
-var index = [];
-
-</script>
+  </script>
 </body>
+
 </html>
