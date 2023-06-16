@@ -51,18 +51,17 @@
 
 
 <script>
-const git1 = document.getElementById('git1')
-const git2 = document.getElementById('git2')
-const git3 = document.getElementById('git3')
-const git4 = document.getElementById('git4')
 if(sessionStorage.getItem('GitPackUnlocked') == 'true')
 {
+    const git1 = document.getElementById('git1')
+    const git2 = document.getElementById('git2')
+    const git3 = document.getElementById('git3')
+    const git4 = document.getElementById('git4')
     document.getElementById('gitLock').remove()
     git1.classList.remove('locked');
     git2.classList.remove('locked');
     git3.classList.remove('locked');
-    git4.classList.remove('locked');
-    
+    git4.classList.remove('locked');   
 }
 var body = document.getElementById('body')
 var r1T = document.getElementById('red1')

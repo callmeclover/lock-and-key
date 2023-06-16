@@ -7,6 +7,10 @@ body {
   color: #eb8934;
 }
 
+textarea:focus{
+  outline: none;
+}
+
 span {
   user-select: none;
 }
