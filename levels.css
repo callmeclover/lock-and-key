@@ -55,6 +55,11 @@
   transition: background-color 0.6s;
 }
 
+.inRuby3 {
+  animation: backgroundpulse 2s infinite ease-in-out;
+  background-color: #f47bad;
+}
+
 .luvu {
   animation: backgroundpulse 2s infinite ease-in-out;
   background-color: #eb3883;
