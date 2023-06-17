@@ -6,6 +6,7 @@ body {
   font-family: 'Orbit', sans-serif;
   filter: alpha(opacity=0);
   opacity: 0;
+  overflow: hidden;
   color: #58e600;
 }
 
@@ -27,9 +28,14 @@ span {
   }
 }
 
+#topPadding{
+  height: 25%;
+
+}
+
+
 #consoleLine {
-  position: absolute;
-  top: 7%;
+
   animation-name: lineBlink;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -37,12 +43,19 @@ span {
   font-family: 'Orbit', sans-serif;
   font-size: 6em;
   user-select: none;
+word-wrap: normal;
   color: #58e600;
-
 }
 
+#consoleText{
+  font-family: 'Orbit', sans-serif;
+  font-size: 6em;
+  user-select: none;
+  color: #58e600;
+}
 
 .title {
+  position:absolute;
   font-family: 'Orbit', sans-serif;
   text-align: center;
   font-size: 6em;
@@ -58,6 +71,7 @@ span {
 }
 
 .word {
+  position:absolute;
   padding: 0 10px;
   white-space: nowrap;
   display: inline-block;
@@ -71,6 +85,7 @@ span {
 }
 
 .pulsing-text-2 {
+
   user-select: none;
   /* Fallback: Set a background color. */
   background-color: #58e600;
@@ -115,7 +130,7 @@ span {
   padding: 1em;
   margin-top: 10%;
   cursor: pointer;
-  background: #272727;
+  background: #111111;
   color: #58e600;
   border-radius: 2em;
 }

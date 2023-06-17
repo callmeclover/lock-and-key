@@ -8,7 +8,9 @@
 </head>
 
 <body id="body">
+  <div id="topPadding"></div>
   <div id="console">
+    <span id="consoleText">lock and key</span>
     <span id="consoleLine">|</span>
   </div>
   <div class='title container'>
@@ -29,8 +31,10 @@
 
     </div>
   </div>
-<p id="consoleLine">|</p>
-  <div class="pulsing-text-2">wait, this isn't a terminal...</div>
+
+  <div class="pulsing-text-2">wait, this isn't a terminal...<div><b>Octocat</b>:<kbd>I would recommend reseting to branch because this
+        looks like a development version</kbd></div>
+  </div>
 
   <div id="button" class="hidden">Next Level</div>
 
@@ -46,10 +50,34 @@
     //    document.getElementById('button').classList.add('animate')
     // }
 
+
     document.onkeydown = function (event) {
-      alert(event.key)
-      switch(event.key){
-         
+
+
+      switch (event.key) {
+        case 'Backspace':
+          let str = document.getElementById('consoleText').innerText;
+          str = str.substring(0, str.length - 1);
+          document.getElementById('consoleText').innerText = str;
+          break;
+        case 'Enter':
+          if (document.getElementById('consoleText').innerText.toLowerCase() == 'git reset') {
+              document.getElementById('button').classList.remove('hidden')
+              document.getElementById('button').classList.add('animate')
+            
+          }
+          document.getElementById('consoleText').innerText = '';
+          break;
+
+        default:
+          if (event.key.length === 1) {
+            if (document.getElementById('consoleText').innerText.length < 24) {
+              document.getElementById('consoleText').innerText += event.key;
+            }
+          } else {
+            console.log('non-alphanumerical key')
+          }
+          break;
       }
     }
 
