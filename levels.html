@@ -42,10 +42,27 @@
             <div>
                 <svg class="level" id="eQK0vkFGVRD1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 250 250" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="30" height="30" rx="4" ry="4" transform="matrix(5.245864 0 0 5.245861 71.31204 71.312085)" fill="none" stroke="#fc036b" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10"/><polygon fill="#fc036b" points="-0.731384,-13.909552 7.048176,-23.166806 14.638522,-28.527956 25.307663,-23.166806 28.531695,-13.909552 22.228866,10.727036 14.638522,24.27051 0,32.413731 -15.722856,24.27051 -25.481871,10.727036 -32.530048,-13.909552 -28.531696,-23.166806 -19.369955,-28.527956 -9.216847,-23.166806 -0.731384,-13.909552" transform="matrix(1.517606 0 0 1.517606 152.888488 147.19284)" stroke-width="0"/></svg>
             </div>
-
+        <!-- git pack -->
+        <br><span style="font-size: 2em; font-family: inherit; color: inherit;">git Pack&puncsp;</span><i onclick="window.location = 'git/'" style="font-size: 1.8em;" class="bi bi-lock" id="gitLock"></i><br>
+        <a href="levels/git/git1.html"><svg class="level locked" id="git1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 250 250" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="30" height="30" rx="4" ry="4" transform="matrix(5.245864 0 0 5.245861 71.31204 71.312085)" fill="none" stroke="#2e2e2e" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10"/><polygon fill="rgb(59,255,0)" points="0,-30 28.531695,-9.27051 17.633558,24.27051 -17.633558,24.27051 -28.531695,-9.27051 0,-30" transform="matrix(1.367271 0 0 1.367271 150 152.864745)" stroke-width="0"/></svg></a>
+        <a href="levels.html"><svg class="level locked" id="git2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 250 250" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="30" height="30" rx="4" ry="4" transform="matrix(5.245864 0 0 5.245861 71.31204 71.312085)" fill="none" stroke="#2e2e2e" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10"/><polygon fill="rgb(59,255,0)" points="0,-30 28.531695,-9.27051 17.633558,24.27051 -17.633558,24.27051 -28.531695,-9.27051 0,-30" transform="matrix(1.367271 0 0 1.367271 150 152.864745)" stroke-width="0"/></svg></a>
+        <a href="levels.html"><svg class="level locked" id="git3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 250 250" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="30" height="30" rx="4" ry="4" transform="matrix(5.245864 0 0 5.245861 71.31204 71.312085)" fill="none" stroke="#2e2e2e" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10"/><polygon fill="rgb(59,255,0)" points="0,-30 28.531695,-9.27051 17.633558,24.27051 -17.633558,24.27051 -28.531695,-9.27051 0,-30" transform="matrix(1.367271 0 0 1.367271 150 152.864745)" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10" stroke-width="4"/></svg></a>
+        <a href="levels.html"><svg class="level locked" id="git4" id="erbgXvxJ5f11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 250 250" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="30" height="30" rx="4" ry="4" transform="matrix(5.245864 0 0 5.245861 71.31204 71.312085)" fill="none" stroke="#2e2e2e" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="10"/><polygon points="0,-30 28.531695,-9.27051 17.633558,24.27051 -17.633558,24.27051 -28.531695,-9.27051 0,-30" transform="matrix(1.367271 0 0 1.367271 150 152.864745)" fill="rgb(59,255,0)" stroke-width="0"/><polygon points="0,-30 8.816779,-12.135255 28.531695,-9.27051 14.265848,4.635255 17.633558,24.27051 0,15 -17.633558,24.27051 -14.265848,4.635255 -28.531695,-9.27051 -8.816779,-12.135255 0,-30" transform="matrix(1.13973 0 0 1.13973 150 152.864745)" fill="#fff" stroke-width="0"/></svg></a>
 
 
 <script>
+if(sessionStorage.getItem('GitPackUnlocked') == 'true')
+{
+    const git1 = document.getElementById('git1')
+    const git2 = document.getElementById('git2')
+    const git3 = document.getElementById('git3')
+    const git4 = document.getElementById('git4')
+    document.getElementById('gitLock').remove()
+    git1.classList.remove('locked');
+    git2.classList.remove('locked');
+    git3.classList.remove('locked');
+    git4.classList.remove('locked');   
+}
 var body = document.getElementById('body')
 var r1T = document.getElementById('red1')
 var p1T = document.getElementById('purple1')

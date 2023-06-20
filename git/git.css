@@ -1,0 +1,42 @@
+#hiddenText {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  color: rgb(231, 231, 231);
+  forced-color-adjust: none; 
+  visibility: hidden;
+}
+
+
+
+#consoleH{
+  border-style: none;
+  resize: none;
+  position: absolute;
+  top: 5%;
+  background-color: black;
+  color: rgb(59,255,0);
+  visibility: hidden;
+  height: 20px;
+  width: 100px;
+}
+
+#consoleH:focus{
+outline: none;
+}
+
+#consoleRun{
+  border-style: none;
+  resize: none;
+  position: absolute;
+  top: 5%;
+  background-color: black;
+  color: rgb(59,255,0);
+  left: 100px;
+  visibility: hidden;
+  height: 20px;
+}
+
+#consoleRun:focus{
+outline: none;
+}

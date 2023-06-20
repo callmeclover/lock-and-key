@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="git.css">
+</head>
+
+<body id="body">
+  <kbd>
+    <div style="position: absolute; top: 15; left: 20;"><span>cannot GET <span
+          onclick="GreenText(this)">/git/index.html</span></span></div>
+  </kbd>
+  <div id="hiddenText">Try running <kbd>git pull</kbd> to retreive this pack</div>
+  <textarea maxlength="10" id="consoleH"></textarea><button id="consoleRun">run</button>
+  <script>
+
+    const consoleH = document.getElementById('consoleH')
+    const consoleHRun = document.getElementById('consoleRun')
+    function GreenText(text) {
+      text.style.color = 'rgb(59,255,0)'
+      consoleH.style.visibility = 'visible'
+      consoleHRun.style.visibility = 'visible'
+      document.getElementById('hiddenText').style.visibility = 'visible'
+    }
+    document.getElementById('consoleRun').onclick = function () {
+      if (document.getElementById('consoleH').value == 'git pull' || document.getElementById('consoleH').value == 'Git pull') {
+        sessionStorage.setItem('GitPackUnlocked', 'true')
+        window.location = '../levels.html'
+      }
+      document.getElementById('consoleH').value = ''
+
+    }
+
+  </script>
+</body>
+
+</html>
