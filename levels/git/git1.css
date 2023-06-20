@@ -10,6 +10,11 @@ body {
   color: #58e600;
 }
 
+#console {
+  letter-spacing: -10px;
+  margin-left: 30;
+}
+
 span {
   user-select: none;
 }
